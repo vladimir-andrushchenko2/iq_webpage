@@ -5,7 +5,13 @@ const isMenuOpen = ref(false)
 </script>
 
 <template>
-  <div class="menu" :class="{ menu_opened: isMenuOpen }">
+  <div
+    @wheel.prevent
+    @touchmove.prevent
+    @scroll.prevent
+    class="menu"
+    :class="{ menu_opened: isMenuOpen }"
+  >
     <button class="close-menu-btn" @click="isMenuOpen = !isMenuOpen">
       <svg
         width="28"
@@ -106,10 +112,11 @@ const isMenuOpen = ref(false)
 .menu {
   background-color: #181818;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
 
   position: absolute;
   left: 0;
+  z-index: 1;
 
   visibility: hidden;
   opacity: 0;

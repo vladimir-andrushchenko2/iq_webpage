@@ -54,10 +54,59 @@ import BaseHeader from '@/components/BaseHeader.vue'
       <img class="brain-img" src="../assets/img/brain-scheme.png" alt="" />
       <RouterLink class="link link_primary" to="/">Пройти тест</RouterLink>
     </section>
+
+    <section class="prompt">
+      <p class="prompt__text-primary">
+        Прохождение теста займет у вас не более <span class="accent">12 минут</span>, а его
+        результаты вы сможете <span class="accent">использовать всю жизнь.</span>
+      </p>
+      <p class="prompt__text-secondary">
+        Профессиональная интерпретация и детально проработанные рекомендации позволят вам
+        качественно изменить все аспекты своей жизни: от финансового до любовного.
+      </p>
+      <RouterLink class="link link_secondary" to="/">Пройти тест</RouterLink>
+
+      <div class="copyright">© 2023 Volodymyr Andrushchenko</div>
+    </section>
   </main>
 </template>
 
 <style scoped>
+/* Prompt */
+.prompt {
+  padding: 56px 14px 13px;
+  background-image: url('../assets/img/black-stars.png');
+}
+
+.prompt__text-primary {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  max-width: 262px;
+}
+
+.prompt__text-primary .accent {
+  color: #ffc700;
+  font-weight: 700;
+}
+
+.prompt__text-secondary {
+  padding: 14px 29px;
+  background-color: rgba(243, 243, 242, 0.8);
+  border-radius: 20px;
+  margin: 14px auto 23px;
+}
+
+.copyright {
+  color: white;
+  opacity: 0.5;
+  max-width: max-content;
+  margin: 50px auto 0;
+}
+/* Prompt end */
+
 /* Info */
 .info {
   padding: 40px 11px;
@@ -109,27 +158,6 @@ import BaseHeader from '@/components/BaseHeader.vue'
   max-width: 252px;
 }
 
-.link {
-  display: block;
-  padding: 14px 17px 11px;
-  max-width: max-content;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: black;
-}
-
-.link_primary {
-  background-color: #ffc700;
-}
-
-.hero .link {
-  margin: 170px auto 0;
-}
-
 .hero__paragraph {
   font-weight: 700;
   font-size: 15px;
@@ -171,7 +199,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
       rgba(39, 98, 187, 0) 85.42%
     ),
     url(../assets/img/quote-background.png);
-  padding: 82px 0 28px;
+  padding: 82px 0 58px;
 }
 
 .quote::before {
@@ -216,4 +244,34 @@ import BaseHeader from '@/components/BaseHeader.vue'
 }
 
 /* Quote end */
+
+/* Link */
+
+.link {
+  display: block;
+  padding: 14px 17px 11px;
+  max-width: max-content;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: black;
+  margin: auto;
+}
+
+.link_primary {
+  background-color: #ffc700;
+}
+
+.hero .link {
+  margin-top: 170px;
+}
+
+.link_secondary {
+  color: white;
+  border: 1px solid white;
+}
+/* Link end */
 </style>
