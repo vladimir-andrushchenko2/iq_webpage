@@ -1,5 +1,5 @@
-import RadioQuestion from '@/components/RadioQuestion.vue'
-import ImageQuestion from '@/components/ImageQuestion.vue'
+import RadioQuestion from '@/components/TextQuestion.vue'
+import ImageQuestion from '@/components/NumberQuestion.vue'
 import humansImg from '@/assets/img/humans.png'
 
 export const questions = [
