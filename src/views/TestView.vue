@@ -3,7 +3,17 @@ import BaseHeader from '@/components/BaseHeader.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 import RadioQuestion from '@/components/RadioQuestion.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
-import { ref } from 'vue'
+import { ref, type Ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+type Answer = {
+  id: number
+  value: string
+}
+
+const answers: Answer[] = []
 
 useOverflowHiddenOnBody()
 
@@ -20,7 +30,21 @@ const questions = [
   }
 ]
 
+const currentAnswerValue: Ref<string | null> = ref(null)
+
+function handleAnswerChange(value: string) {
+  currentAnswerValue.value = value
+}
+
 const currentQuestionIndex = ref(0)
+
+function handleNextQuestionBtnClick() {
+  currentQuestionIndex.value++
+
+  if (currentQuestionIndex.value === questions.length) {
+    router.push('/')
+  }
+}
 
 // 13 questions
 </script>
@@ -33,14 +57,21 @@ const currentQuestionIndex = ref(0)
         <ProgressBar :total="13" :current="4" />
       </div>
 
-      <div class="question" style="color: white">
+      <div v-if="currentQuestionIndex < questions.length" class="question" style="color: white">
         <component
           :is="questions[currentQuestionIndex].element"
           :props="questions[currentQuestionIndex].props"
+          @change="handleAnswerChange"
         ></component>
       </div>
 
-      <button class="continue-btn" to="/test">Далее</button>
+      <button
+        @click="handleNextQuestionBtnClick"
+        class="continue-btn"
+        :disabled="currentAnswerValue === null"
+      >
+        Далее
+      </button>
     </main>
   </div>
 </template>
@@ -79,6 +110,11 @@ const currentQuestionIndex = ref(0)
   min-width: 189px;
   background-color: #ffc700;
   margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.continue-btn:disabled {
+  background-color: gray;
 }
 
 .question {
