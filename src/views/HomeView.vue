@@ -36,6 +36,13 @@ import BaseHeader from '@/components/BaseHeader.vue'
         Подробнее
       </button>
     </section>
+
+    <section class="quote">
+      <p class="quote__text">
+        Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и
+        выработать список рекомендаций для повышения этого показателя.
+      </p>
+    </section>
   </main>
 </template>
 
@@ -104,5 +111,58 @@ import BaseHeader from '@/components/BaseHeader.vue'
 
 .scroll-down-btn svg {
   margin-bottom: 3px;
+}
+
+.quote {
+  position: relative;
+  background: radial-gradient(
+      84.34% 50.29% at 48.75% 49.71%,
+      #2950c2 0%,
+      rgba(38, 91, 199, 0.96) 40.62%,
+      rgba(39, 98, 187, 0) 85.42%
+    ),
+    url(../assets/img/quote-background.png);
+  padding: 82px 0 28px;
+}
+
+.quote::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 43px;
+  left: 25px;
+  background-image: url('../assets/img/quote.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.quote::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 11px;
+  right: 29px;
+  background-image: url('../assets/img/quote.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  transform: rotate(180deg);
+}
+
+.quote__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  max-width: 248px;
+  margin: auto;
 }
 </style>
