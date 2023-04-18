@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
-import RadioQuestion from '@/components/RadioQuestion.vue'
+// import RadioQuestion from '@/components/RadioQuestion.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
 import { ref, type Ref } from 'vue'
 import { useRouter } from 'vue-router'
+
+import { questions } from '@/data/questions'
+
+useOverflowHiddenOnBody()
 
 const router = useRouter()
 
@@ -14,21 +18,6 @@ type Answer = {
 }
 
 const answers: Answer[] = []
-
-useOverflowHiddenOnBody()
-
-const questions = [
-  {
-    element: RadioQuestion,
-    props: {
-      title: 'Ваш пол:',
-      items: [
-        { title: 'Мужчина', value: 'man' },
-        { title: 'Женщина', value: 'woman' }
-      ]
-    }
-  }
-]
 
 const currentAnswerValue: Ref<string | null> = ref(null)
 
@@ -41,7 +30,20 @@ const currentQuestionIndex = ref(0)
 function handleNextQuestionBtnClick() {
   currentQuestionIndex.value++
 
+  if (!currentAnswerValue.value) {
+    throw new Error('Next question button must be blocked while question is not yet selected')
+  }
+
+  answers.push({
+    id: currentQuestionIndex.value,
+    value: currentAnswerValue.value
+  })
+
+  currentAnswerValue.value = null
+
   if (currentQuestionIndex.value === questions.length) {
+    console.log(answers)
+    // this is a placeholder
     router.push('/')
   }
 }
