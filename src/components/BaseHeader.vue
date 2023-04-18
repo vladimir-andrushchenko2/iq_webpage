@@ -2,17 +2,21 @@
 import { ref } from 'vue'
 
 const isMenuOpen = ref(false)
+
+function handleMenuToggle() {
+  isMenuOpen.value = !isMenuOpen.value
+
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
+}
 </script>
 
 <template>
-  <div
-    @wheel.prevent
-    @touchmove.prevent
-    @scroll.prevent
-    class="menu"
-    :class="{ menu_opened: isMenuOpen }"
-  >
-    <button class="close-menu-btn" @click="isMenuOpen = !isMenuOpen">
+  <div class="menu" :class="{ menu_opened: isMenuOpen }">
+    <button class="close-menu-btn" @click="handleMenuToggle">
       <svg
         width="28"
         height="28"
@@ -45,7 +49,7 @@ const isMenuOpen = ref(false)
   </div>
 
   <header class="header">
-    <button class="menu-btn" @click="isMenuOpen = !isMenuOpen">
+    <button class="menu-btn" @click="handleMenuToggle">
       <svg
         width="24"
         height="16"
