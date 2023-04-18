@@ -8,7 +8,10 @@ type RadioItem = {
 }
 
 interface Props {
-  props: RadioItem[]
+  props: {
+    items: RadioItem[]
+    title: string
+  }
 }
 
 defineProps<Props>()
@@ -26,8 +29,9 @@ function handleSelect(value: string) {
 </script>
 
 <template>
+  <h2 class="subtitle">{{ props.title }}</h2>
   <ul class="radio-options">
-    <li class="item" v-for="item in props" :key="item.value">
+    <li class="item" v-for="item in props.items" :key="item.value">
       <label class="item__label">
         <input
           class="radio"
@@ -56,6 +60,15 @@ function handleSelect(value: string) {
 </template>
 
 <style scoped>
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 41px;
+}
 .item {
   font-weight: 400;
   font-size: 18px;

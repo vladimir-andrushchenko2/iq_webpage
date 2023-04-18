@@ -10,10 +10,13 @@ useOverflowHiddenOnBody()
 const questions = [
   {
     element: RadioQuestion,
-    props: [
-      { title: 'Мужчина', value: 'man' },
-      { title: 'Женщина', value: 'woman' }
-    ]
+    props: {
+      title: 'Ваш пол:',
+      items: [
+        { title: 'Мужчина', value: 'man' },
+        { title: 'Женщина', value: 'woman' }
+      ]
+    }
   }
 ]
 
