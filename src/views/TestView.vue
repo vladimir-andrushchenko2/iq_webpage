@@ -1,9 +1,23 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
+import RadioQuestion from '@/components/RadioQuestion.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
+import { ref } from 'vue'
 
 useOverflowHiddenOnBody()
+
+const questions = [
+  {
+    element: RadioQuestion,
+    props: [
+      { title: 'Мужчина', value: 'man' },
+      { title: 'Женщина', value: 'woman' }
+    ]
+  }
+]
+
+const currentQuestionIndex = ref(0)
 
 // 13 questions
 </script>
@@ -16,7 +30,12 @@ useOverflowHiddenOnBody()
         <ProgressBar :total="13" :current="4" />
       </div>
 
-      <div class="question" style="color: white">Lol</div>
+      <div class="question" style="color: white">
+        <component
+          :is="questions[currentQuestionIndex].element"
+          :props="questions[currentQuestionIndex].props"
+        ></component>
+      </div>
 
       <button class="continue-btn" to="/test">Далее</button>
     </main>
