@@ -8,7 +8,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
     <section class="hero">
       <p class="subtitle">Пройдите точный и быстрый</p>
       <h1 class="title">тест на определение IQ</h1>
-      <RouterLink class="link" to="/">Пройти тест</RouterLink>
+      <RouterLink class="link link_primary" to="/">Пройти тест</RouterLink>
       <p class="hero__paragraph">
         <span class="accent">
           И получите рекомендации<br />
@@ -43,10 +43,51 @@ import BaseHeader from '@/components/BaseHeader.vue'
         выработать список рекомендаций для повышения этого показателя.
       </p>
     </section>
+
+    <section class="info">
+      <p class="info__text">
+        Также по результатам теста <span class="info__accent">вы получите</span> подробные
+        <span class="info__accent">советы</span> по определению наиболее перспективной
+        <span class="info__accent">для вашего типа интеллекта сферы деятельности</span>, которая
+        принесет вам скорейший финансовый результат.
+      </p>
+      <img class="brain-img" src="../assets/img/brain-scheme.png" alt="" />
+      <RouterLink class="link link_primary" to="/">Пройти тест</RouterLink>
+    </section>
   </main>
 </template>
 
 <style scoped>
+/* Info */
+.info {
+  padding: 40px 11px;
+}
+
+.info .link {
+  margin: auto;
+}
+
+.info__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+
+.info__accent {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.brain-img {
+  margin: auto;
+  display: block;
+  margin-top: 38px;
+}
+
+/* Info end */
+
+/* Hero */
 .hero {
   background-image: url('../assets/img/hero-background.png');
   background-size: cover;
@@ -78,10 +119,14 @@ import BaseHeader from '@/components/BaseHeader.vue'
   line-height: 18px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: black;
+}
+
+.link_primary {
+  background-color: #ffc700;
 }
 
 .hero .link {
-  background-color: #ffc700;
   margin: 170px auto 0;
 }
 
@@ -112,6 +157,10 @@ import BaseHeader from '@/components/BaseHeader.vue'
 .scroll-down-btn svg {
   margin-bottom: 3px;
 }
+
+/* Hero end */
+
+/* Quote */
 
 .quote {
   position: relative;
@@ -165,4 +214,6 @@ import BaseHeader from '@/components/BaseHeader.vue'
   max-width: 248px;
   margin: auto;
 }
+
+/* Quote end */
 </style>
