@@ -24,7 +24,6 @@ const selected: Ref<string | null> = ref(null)
 
 function handleSelect(value: string) {
   selected.value = value
-  console.log(value)
   emit('change', selected.value)
 }
 </script>
