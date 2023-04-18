@@ -1,6 +1,21 @@
 import RadioQuestion from '@/components/RadioQuestion.vue'
+import ImageQuestion from '@/components/ImageQuestion.vue'
+import humansImg from '@/assets/img/humans.png'
 
 export const questions = [
+  {
+    element: ImageQuestion,
+    image: humansImg,
+    props: {
+      title: 'Выберите правильную фигуру из четырёх пронумерованных.',
+      items: [
+        { title: '1', value: '1' },
+        { title: '2', value: '2' },
+        { title: '3', value: '3' },
+        { title: '4', value: '4' }
+      ]
+    }
+  },
   {
     element: RadioQuestion,
     props: {

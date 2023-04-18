@@ -64,7 +64,14 @@ function handleNextQuestionBtnClick() {
           :is="questions[currentQuestionIndex].element"
           :props="questions[currentQuestionIndex].props"
           @change="handleAnswerChange"
-        ></component>
+        >
+          <img
+            class="question__img"
+            v-if="questions[currentQuestionIndex].image"
+            :src="questions[currentQuestionIndex].image"
+            alt="Изображение для вопроса"
+          />
+        </component>
       </div>
 
       <button
@@ -121,5 +128,10 @@ function handleNextQuestionBtnClick() {
 
 .question {
   width: 100%;
+}
+
+.question__img {
+  margin: auto;
+  display: block;
 }
 </style>
