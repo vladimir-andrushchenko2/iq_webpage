@@ -77,4 +77,8 @@ const currentQuestionIndex = ref(0)
   background-color: #ffc700;
   margin-bottom: 25px;
 }
+
+.question {
+  width: 100%;
+}
 </style>
