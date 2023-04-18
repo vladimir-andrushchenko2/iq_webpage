@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader.vue'
+
+function handleScrollDownBtnClick() {
+  window.scroll({ top: 550, behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -17,7 +21,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
         <br />
         и улучшению финансового благосостояния и личной жизни
       </p>
-      <button class="scroll-down-btn">
+      <button @click="handleScrollDownBtnClick" class="scroll-down-btn">
         <svg
           width="16"
           height="16"
