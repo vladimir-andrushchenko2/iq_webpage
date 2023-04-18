@@ -35,5 +35,19 @@ export const questions = [
         { title: 'Хижина', value: 'Hut' }
       ]
     }
+  },
+  {
+    element: RadioQuestion,
+    props: {
+      title: 'Продолжите числовой ряд: 18 20 24 32',
+      items: [
+        { title: '62', value: '62' },
+        { title: '48', value: '48' },
+        { title: '74', value: '74' },
+        { title: '57', value: '57' },
+        { title: '60', value: '60' },
+        { title: '70', value: '70' }
+      ]
+    }
   }
 ]
