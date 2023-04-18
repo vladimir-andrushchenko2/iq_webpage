@@ -8,7 +8,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
     <section class="hero">
       <p class="subtitle">Пройдите точный и быстрый</p>
       <h1 class="title">тест на определение IQ</h1>
-      <RouterLink class="link link_primary" to="/">Пройти тест</RouterLink>
+      <RouterLink class="link link_primary" to="/test">Пройти тест</RouterLink>
       <p class="hero__paragraph">
         <span class="accent">
           И получите рекомендации<br />
@@ -52,7 +52,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
         принесет вам скорейший финансовый результат.
       </p>
       <img class="brain-img" src="../assets/img/brain-scheme.png" alt="" />
-      <RouterLink class="link link_primary" to="/">Пройти тест</RouterLink>
+      <RouterLink class="link link_primary" to="/test">Пройти тест</RouterLink>
     </section>
 
     <section class="prompt">
@@ -64,7 +64,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
         Профессиональная интерпретация и детально проработанные рекомендации позволят вам
         качественно изменить все аспекты своей жизни: от финансового до любовного.
       </p>
-      <RouterLink class="link link_secondary" to="/">Пройти тест</RouterLink>
+      <RouterLink class="link link_secondary" to="/test">Пройти тест</RouterLink>
 
       <div class="copyright">© 2023 Volodymyr Andrushchenko</div>
     </section>

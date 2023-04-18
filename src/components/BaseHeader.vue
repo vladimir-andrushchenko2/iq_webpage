@@ -38,7 +38,7 @@ const isMenuOpen = ref(false)
           <RouterLink class="link" to="/">Информация о тесте</RouterLink>
         </li>
         <li class="links-item">
-          <RouterLink class="link" to="/">Пройти тест</RouterLink>
+          <RouterLink class="link" to="/test">Пройти тест</RouterLink>
         </li>
       </ul>
     </nav>
