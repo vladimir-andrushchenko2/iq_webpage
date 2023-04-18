@@ -73,7 +73,7 @@ function handleSelect(value: string) {
 .item {
   font-weight: 400;
   font-size: 18px;
-  padding: 15px 35px;
+  padding: 15px 10px 15px 25px;
   background-color: #f2f3f321;
 }
 
@@ -108,6 +108,7 @@ function handleSelect(value: string) {
 }
 
 .item__label-text {
-  margin-left: 40px;
+  margin-left: 8px;
+  max-width: 210px;
 }
 </style>
