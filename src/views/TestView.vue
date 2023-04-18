@@ -1,23 +1,17 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader.vue'
-import { onMounted, onUnmounted } from 'vue'
+import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
 
-onMounted(() => {
-  document.body.style.overflow = 'hidden'
-})
+useOverflowHiddenOnBody()
 
-onUnmounted(() => {
-  document.body.style.overflow = 'auto'
-})
+// 13 questions
 </script>
 
 <template>
   <div class="page">
     <BaseHeader></BaseHeader>
     <main class="main">
-      <p class="hi">hi</p>
-      <p class="lol">lol</p>
-      <p class="uwu">uwu</p>
+      <div class="progress-bar"></div>
     </main>
   </div>
 </template>
