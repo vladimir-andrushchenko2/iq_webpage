@@ -7,23 +7,6 @@ import pyramidImg from '@/assets/img/pyramid.png'
 
 export const questions = [
   {
-    element: ColorQuestion,
-    props: {
-      title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
-      items: [
-        { title: 'Gray', value: '#A8A8A8' },
-        { title: 'Blue', value: '#0000A9' },
-        { title: 'Green', value: '#00A701' },
-        { title: 'Red', value: '#F60100' },
-        { title: 'Yellow', value: '#FDFF19' },
-        { title: 'Brown', value: '#A95403' },
-        { title: 'Black', value: '#000000' },
-        { title: 'Maroon', value: '#850068' },
-        { title: 'Cyan', value: '#46B3AC' }
-      ]
-    }
-  },
-  {
     element: TextQuestion,
     props: {
       title: 'Ваш пол:',
@@ -69,6 +52,40 @@ export const questions = [
         { title: '57', value: '57' },
         { title: '60', value: '60' },
         { title: '70', value: '70' }
+      ]
+    }
+  },
+  {
+    element: ColorQuestion,
+    props: {
+      title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
+      items: [
+        { title: 'Gray', value: '#A8A8A8' },
+        { title: 'Blue', value: '#0000A9' },
+        { title: 'Green', value: '#00A701' },
+        { title: 'Red', value: '#F60100' },
+        { title: 'Yellow', value: '#FDFF19' },
+        { title: 'Brown', value: '#A95403' },
+        { title: 'Black', value: '#000000' },
+        { title: 'Maroon', value: '#850068' },
+        { title: 'Cyan', value: '#46B3AC' }
+      ]
+    }
+  },
+  {
+    element: ColorQuestion,
+    props: {
+      title: 'Отдохните пару секунд, еще раз Выберите цвет, который сейчас наиболее Вам приятен:',
+      items: [
+        { title: 'Blue', value: '#0000A9' },
+        { title: 'Gray', value: '#A8A8A8' },
+        { title: 'Maroon', value: '#850068' },
+        { title: 'Green', value: '#00A701' },
+        { title: 'Black', value: '#000000' },
+        { title: 'Cyan', value: '#46B3AC' },
+        { title: 'Yellow', value: '#FDFF19' },
+        { title: 'Brown', value: '#A95403' },
+        { title: 'Red', value: '#F60100' }
       ]
     }
   },

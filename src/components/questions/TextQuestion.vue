@@ -70,6 +70,10 @@ function handleSelect(value: string) {
   text-transform: uppercase;
   margin-bottom: 41px;
 }
+
+.radio-options {
+  margin-top: 15px;
+}
 .item {
   font-weight: 400;
   font-size: 18px;
