@@ -1,10 +1,28 @@
 import TextQuestion from '@/components/questions/TextQuestion.vue'
 import NumberQuestion from '@/components/questions/NumberQuestion.vue'
+import ColorQuestion from '@/components/questions/ColorQuestion.vue'
 
 import humansImg from '@/assets/img/humans.png'
 import pyramidImg from '@/assets/img/pyramid.png'
 
 export const questions = [
+  {
+    element: ColorQuestion,
+    props: {
+      title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
+      items: [
+        { title: 'Gray', value: '#A8A8A8' },
+        { title: 'Blue', value: '#0000A9' },
+        { title: 'Green', value: '#00A701' },
+        { title: 'Red', value: '#F60100' },
+        { title: 'Yellow', value: '#FDFF19' },
+        { title: 'Brown', value: '#A95403' },
+        { title: 'Black', value: '#000000' },
+        { title: 'Maroon', value: '#850068' },
+        { title: 'Cyan', value: '#46B3AC' }
+      ]
+    }
+  },
   {
     element: TextQuestion,
     props: {
