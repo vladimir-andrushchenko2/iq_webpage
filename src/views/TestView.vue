@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BaseHeader from '@/components/BaseHeader.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
-// import RadioQuestion from '@/components/RadioQuestion.vue'
+import LoadingIndicator from '@/components/LoadingIndicator.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
 import { ref, type Ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -44,11 +44,9 @@ function handleNextQuestionBtnClick() {
   if (currentQuestionIndex.value === questions.length) {
     console.log(answers)
     // this is a placeholder
-    router.push('/')
+    // router.push('/')
   }
 }
-
-// 13 questions
 </script>
 
 <template>
@@ -73,6 +71,7 @@ function handleNextQuestionBtnClick() {
           />
         </component>
       </div>
+      <div v-else><LoadingIndicator /></div>
 
       <button
         @click="handleNextQuestionBtnClick"
