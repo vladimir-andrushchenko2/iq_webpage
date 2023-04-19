@@ -37,3 +37,22 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.brain-sm {
+  width: 48px;
+}
+
+.header-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffc700;
+  margin-left: 10px;
+}
+
+.header-text_sm {
+  font-size: 10px;
+}

@@ -3,6 +3,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
 import { onMounted, ref, type Ref } from 'vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
 import phoneSvg from '@/assets/ui/phone.svg'
+import brainImg from '@/assets/img/blue-brain.png'
 
 useOverflowHiddenOnBody()
 
@@ -29,7 +30,10 @@ onMounted(() => {
 
 <template>
   <div class="page">
-    <BaseHeader></BaseHeader>
+    <BaseHeader>
+      <img :src="brainImg" alt="Мозг" class="brain-sm" />
+      <span class="header-text">Готово!</span>
+    </BaseHeader>
     <main class="main">
       <h1 class="title">Ваш результат рассчитан:</h1>
       <p class="paragraph">

@@ -114,6 +114,7 @@ function handleScrollDownBtnClick() {
 /* Info */
 .info {
   padding: 40px 11px;
+  background-color: white;
 }
 
 .info .link {

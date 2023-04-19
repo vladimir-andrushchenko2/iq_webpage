@@ -5,6 +5,7 @@ import LoadingIndicator from '@/components/LoadingIndicator.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
 import { ref, type Ref } from 'vue'
 import { useRouter } from 'vue-router'
+import brainImg from '@/assets/img/blue-brain.png'
 
 import { questions } from '@/data/questions'
 
@@ -59,7 +60,11 @@ function handleNextQuestionBtnClick() {
 
 <template>
   <div class="page">
-    <BaseHeader></BaseHeader>
+    <BaseHeader>
+      <img :src="brainImg" alt="Мозг" class="brain-sm" />
+      <span class="header-text header-text_sm">тест на определение IQ </span>
+    </BaseHeader>
+
     <main class="main">
       <div class="progress-bar-wrapper">
         <ProgressBar :total="questions.length" :current="currentQuestionIndex" />
