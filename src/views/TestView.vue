@@ -3,11 +3,15 @@ import BaseHeader from '@/components/BaseHeader.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 import LoadingIndicator from '@/components/LoadingIndicator.vue'
 import { useOverflowHiddenOnBody } from '@/composables/useOverflowHiddenOnBody'
-import { ref, type Ref } from 'vue'
+import { onMounted, ref, type Ref } from 'vue'
 import { useRouter } from 'vue-router'
 import brainImg from '@/assets/img/blue-brain.png'
 
 import { questions } from '@/data/questions'
+
+onMounted(() => {
+  window.scrollTo({ top: 0 })
+})
 
 useOverflowHiddenOnBody()
 
