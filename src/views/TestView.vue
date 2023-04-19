@@ -47,7 +47,7 @@ function handleNextQuestionBtnClick() {
 
     fetch('https://swapi.dev/api/people/1/')
       .then(() => {
-        router.push('/')
+        router.push('/result')
       })
       .catch((err) => {
         router.push('/')
