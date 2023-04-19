@@ -4,6 +4,7 @@ import ColorQuestion from '@/components/questions/ColorQuestion.vue'
 
 import humansImg from '@/assets/img/humans.png'
 import pyramidImg from '@/assets/img/pyramid.png'
+import starImg from '@/assets/img/star-with-numbers.png'
 
 export const questions = [
   {
@@ -142,6 +143,21 @@ export const questions = [
         },
         { title: 'оно устойчиво', value: 'stable' },
         { title: 'оно-находится в состоянии равновесия ', value: 'balanced' }
+      ]
+    }
+  },
+  {
+    element: NumberQuestion,
+    image: starImg,
+    props: {
+      title: 'Вставьте подходящее число',
+      items: [
+        { title: '34', value: '34' },
+        { title: '36', value: '36' },
+        { title: '53', value: '53' },
+        { title: '44', value: '44' },
+        { title: '66', value: '66' },
+        { title: '42', value: '42' }
       ]
     }
   }
