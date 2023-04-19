@@ -42,9 +42,17 @@ function handleNextQuestionBtnClick() {
   currentAnswerValue.value = null
 
   if (currentQuestionIndex.value === questions.length) {
+    // answers to the questins can be used
     console.log(answers)
-    // this is a placeholder
-    // router.push('/')
+
+    fetch('https://swapi.dev/api/people/1/')
+      .then(() => {
+        router.push('/')
+      })
+      .catch((err) => {
+        router.push('/')
+        console.error(err)
+      })
   }
 }
 </script>
