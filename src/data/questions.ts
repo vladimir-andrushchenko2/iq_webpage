@@ -42,20 +42,6 @@ export const questions = [
     }
   },
   {
-    element: TextQuestion,
-    props: {
-      title: 'Продолжите числовой ряд: 18 20 24 32',
-      items: [
-        { title: '62', value: '62' },
-        { title: '48', value: '48' },
-        { title: '74', value: '74' },
-        { title: '57', value: '57' },
-        { title: '60', value: '60' },
-        { title: '70', value: '70' }
-      ]
-    }
-  },
-  {
     element: ColorQuestion,
     props: {
       title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
@@ -69,6 +55,20 @@ export const questions = [
         { title: 'Black', value: '#000000' },
         { title: 'Maroon', value: '#850068' },
         { title: 'Cyan', value: '#46B3AC' }
+      ]
+    }
+  },
+  {
+    element: TextQuestion,
+    props: {
+      title: 'Продолжите числовой ряд: 18 20 24 32',
+      items: [
+        { title: '62', value: '62' },
+        { title: '48', value: '48' },
+        { title: '74', value: '74' },
+        { title: '57', value: '57' },
+        { title: '60', value: '60' },
+        { title: '70', value: '70' }
       ]
     }
   },
