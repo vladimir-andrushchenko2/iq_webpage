@@ -1,5 +1,5 @@
-import TextQuestion from '@/components/TextQuestion.vue'
-import NumberQuestion from '@/components/NumberQuestion.vue'
+import TextQuestion from '@/components/questions/TextQuestion.vue'
+import NumberQuestion from '@/components/questions/NumberQuestion.vue'
 
 import humansImg from '@/assets/img/humans.png'
 import pyramidImg from '@/assets/img/pyramid.png'
