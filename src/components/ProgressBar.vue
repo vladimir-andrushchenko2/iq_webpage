@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 const props = defineProps({
   total: {
     type: Number,
@@ -10,7 +11,7 @@ const props = defineProps({
   }
 })
 
-const progress = (props.current / props.total) * 100
+const progress = computed(() => (props.current / props.total) * 100)
 </script>
 
 <template>

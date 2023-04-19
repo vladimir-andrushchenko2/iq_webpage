@@ -56,7 +56,7 @@ function handleNextQuestionBtnClick() {
     <BaseHeader></BaseHeader>
     <main class="main">
       <div class="progress-bar-wrapper">
-        <ProgressBar :total="13" :current="4" />
+        <ProgressBar :total="questions.length" :current="currentQuestionIndex" />
       </div>
 
       <div v-if="currentQuestionIndex < questions.length" class="question" style="color: white">
